@@ -16,6 +16,7 @@ const Login = () => {
     copyInfo[name] = value;
     setLoginInfo(copyInfo);
   };
+  // console.log(object)
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { email, password } = loginInfo;
