@@ -1,0 +1,7 @@
+
+.Navbar .container{
+    align-items: center;
+    display: flex;
+    flex-wrap: inherit;
+    justify-content: space-between;
+} 
