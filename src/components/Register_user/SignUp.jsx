@@ -3,6 +3,7 @@ import { handleError, handleSuccess } from "../../assets/utils";
 import { ToastContainer, Bounce } from "react-toastify";
 import { Signup_User } from "../Axios/Axios";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const SignUp = () => {
   const navigate = useNavigate("");
@@ -31,8 +32,10 @@ const SignUp = () => {
       const response = await Signup_User(signup);
       if (response.status == 201) {
         handleSuccess("Sign Up Successfully");
+        Cookies.set("Token", response.data.jwtToken , { expires: 7 })
+        Cookies.set("Token", response.data.jwtToken , { expires: 7 })
         setTimeout(() => {
-          navigate("/user/login");
+          navigate("/");
         }, 1000);
       } else {
         handleError(error.details[0].message);

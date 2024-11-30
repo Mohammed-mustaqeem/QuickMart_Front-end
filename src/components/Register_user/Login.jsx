@@ -3,6 +3,7 @@ import { ToastContainer, Bounce } from "react-toastify";
 import { handleError, handleSuccess } from "../../assets/utils";
 import { Login_User } from "../Axios/Axios";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const Login = () => {
   const [loginInfo, setLoginInfo] = useState({
@@ -28,6 +29,8 @@ const Login = () => {
       const response = await Login_User(loginInfo);
       if (response.status == 201) {
         handleSuccess("login succesfully");
+        Cookies.set("Token", response.data.jwtToken, { expires: 7 });
+        Cookies.set("name", response.data.name, { expires: 7 });
         setTimeout(() => {
           navigate("/");
         }, 1000);
