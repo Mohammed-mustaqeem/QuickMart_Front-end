@@ -18,7 +18,7 @@ function App() {
  const location = useLocation()
  let currentPath = location.pathname;
 
-
+ 
   return (
     <>
     {currentPath == "/user/login" || currentPath == "/user/signup" ? (
