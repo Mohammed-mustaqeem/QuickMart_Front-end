@@ -199,17 +199,17 @@ const Footer = () => {
               <nav class="list-none mb-10">
                 <li>
                   <NavLink className="text-gray-600 hover:text-gray-800">
-                    First link
+                    About Us
                   </NavLink>
                 </li>
                 <li>
                   <NavLink className="text-gray-600 hover:text-gray-800">
-                    First link
+                    Contact Us
                   </NavLink>
                 </li>
                 <li>
                   <NavLink className="text-gray-600 hover:text-gray-800">
-                    First link
+                    
                   </NavLink>
                 </li>
                 <li>
