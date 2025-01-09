@@ -42,6 +42,8 @@ const ProductDetails = () => {
                 <Button variant="dark me-2" onClick={()=>addProduct(ProductById)} >Add To Cart</Button>
                 <NavLink className="no-underline text-gray-500 btn outline-dark" to="/cart" >Go To Cart</NavLink>
             </div>
+
+            
         </div> 
       </div>
     </>
