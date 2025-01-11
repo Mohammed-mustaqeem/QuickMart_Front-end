@@ -3,13 +3,19 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Cookies from "js-cookie";
 import { handleSuccess } from "../../assets/utils";
 import { ToastContainer, Bounce } from "react-toastify";
-// import './Navigationbar.css'
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faFacebook,
+//   faTwitter,
+//   faInstagram,
+// } from "@fortawesome/free-brands-svg-icons"; 
+import './Navigationbar.css'
 
 const Navigationbr = () => {
   const navigate = useNavigate();
@@ -40,10 +46,128 @@ const Navigationbr = () => {
 
   return (
     <>
-      <Navbar
-        expand="lg"
-        className="bg-body-tertiary navbar shadow-md bg-white "
-      >
+      <div className="header-top d-none d-sm-block">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-12">
+              <div className="d-flex justify-content-between flex-wrap align-items-center">
+                {/* Left Section: Links */}
+                <div className="header-info-left ">
+                  <ul className="flex gap-5 text-[14px]">
+                    <li>
+                      <Link
+                        className="no-underline text-gray-900"
+                        to="/about-us"
+                      >
+                        About Us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="no-underline text-gray-900"
+                        to="/privacy"
+                      >
+                        Privacy
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="no-underline text-gray-900" to="/faq">
+                        FAQ
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="no-underline text-gray-900"
+                        to="/careers"
+                      >
+                        Careers
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Right Section: Orders & Social */}
+                <div className="  header-info-right d-flex">
+                  {/* Order Links */}
+                  <ul className="order-list flex gap-4 text-[14px]">
+                    <li>
+                      <Link
+                        className="no-underline text-gray-900"
+                        to="/wishlist"
+                      >
+                        My Wishlist
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="no-underline text-gray-900"
+                        to="/track-order"
+                      >
+                        Track Your Order
+                      </Link>
+                    </li>
+                  </ul>
+
+                  {/* Social Icons */}
+                  <ul className="header-social flex ml-3 gap-2 ">
+                    <li>
+                      <a
+                        className="no-underline  "
+                        href="https://facebook.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fa fa-facebook"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="no-underline "
+                        href="https://instagram.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fa fa-instagram"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="no-underline "
+                        href="https://twitter.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fa fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="no-underline text-gray-500"
+                        href="https://linkedin.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fa fa-linkedin-in"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="no-underline "
+                        href="https://youtube.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fa fa-youtube"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Navbar className="">
         <Container
           fluid
           className="p-3  navbar-expand-lg navbar-light bg-light container"
@@ -74,14 +198,23 @@ const Navigationbr = () => {
 
             <div className="button">
               {isLoggedIn ? (
-              <Button variant="outline-dark" className="fa fa-sign-in ms-2" onClick={handleLogout}>
-                {" "}
-                Logout
-              </Button> ) : (
-                <Button variant="outline-dark" className="fa fa-sign-in ms-2" onClick={handleLogin}>
-                {" "}
-                Login
-              </Button>
+                <Button
+                  variant="outline-dark"
+                  className="fa fa-sign-in ms-2"
+                  onClick={handleLogout}
+                >
+                  {" "}
+                  Logout
+                </Button>
+              ) : (
+                <Button
+                  variant="outline-dark"
+                  className="fa fa-sign-in ms-2"
+                  onClick={handleLogin}
+                >
+                  {" "}
+                  Login
+                </Button>
               )}
               <Button
                 variant="outline-dark"
