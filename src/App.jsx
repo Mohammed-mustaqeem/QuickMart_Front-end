@@ -3,6 +3,7 @@ import '../src/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 // import Navigationbr from './components/Home/Navigationbar';
+import "bootstrap/dist/css/bootstrap.min.css";
 import HomePage from './pages/HomePage';
 import { Routes, Route, useLocation} from 'react-router-dom'
 import Products from './components/Products/Products';
