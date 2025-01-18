@@ -1,0 +1,62 @@
+.hero {
+  position: relative;
+  width: 100%;
+}
+
+.card-img {
+  object-fit: cover;
+  height: 550px;
+  width: 100%;
+}
+
+.card-img-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Add a dark overlay for better text visibility */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container h1 {
+  font-size: 2rem;
+}
+
+.container p {
+  font-size: 1.2rem;
+}
+
+/* Desktop View */
+@media (min-width: 768px) {
+  .card-img {
+    height: 600px;
+  }
+
+  .container h1 {
+    font-size: 3.5rem;
+  }
+
+  .container p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+  .card-img {
+    height: 400px; /* Smaller height for better mobile experience */
+  }
+
+  .card-img-overlay {
+    text-align: center; /* Center text for mobile */
+  }
+
+  .container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .container p {
+    font-size: 1.2rem;
+  }
+}

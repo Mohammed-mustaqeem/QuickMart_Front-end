@@ -1,30 +1,24 @@
-import React from 'react'
-
+import React from "react";
+import './Hero.css'
 const Hero = () => {
   return (
     <div className="hero">
-      <div className="bg-dark text-wh border-0 card">
-        <img
-          src="\Images\h1_hero1.jpg.webp"
-          alt=""
-          className="card-img  "
-          style={{ height: "550px" }}
-        />
-        <div className="flex flex-col justify-content-center card-img-overlay">
+      <div className="card bg-dark text-white border-0">
+        <img src="/Images/h1_hero1.jpg.webp" alt="Hero" className="card-img" />
+        <div className="card-img-overlay d-flex flex-column justify-content-center text-center text-md-start">
           <div className="container">
-            <div className="display-3 fw-bolder MS-0 text-gray-700 card-title h5">
+            <h1 className="display-4 fw-bold text-gray-700 mb-2">
               NEW SESSION ARRIVALS
-            </div>
-            <p className="text-gray-700 display-5">
-              CHECK OUT ALL TRENDS<span style={{ color: "red" }}> MEN'S</span>
+            </h1>
+            <p className="lead text-gray-700 fs-4">
+              CHECK OUT ALL TRENDS
+              <span style={{ color: "red" }}> MEN'S</span>
             </p>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Hero
-
-// d-flex flex-column justify-content-center card-img-overlay
+export default Hero;
